@@ -1,4 +1,5 @@
 import datetime
+import urllib
 
 import requests
 from bs4 import BeautifulSoup
@@ -122,10 +123,10 @@ def get_coordinates(soup_detail):
     return coordinates
 
 
-def send_text(text):
-    resp = requests.get(f'https://api.telegram.org/bot{BOT_API_KEY}/sendMessage?'
+def send_message(html):
+    resp = requests.get(f'https://api.telegram.org/bot{BOT_API_KEY}/sendMessage?parse_mode=HTML&'
                         f'chat_id={CHANNEL_NAME}&'
-                        f'text={text}')
+                        f'text={urllib.parse.quote_plus(html)}')
     resp.raise_for_status()
 
 
@@ -150,13 +151,13 @@ if __name__ == '__main__':
     print(f"Searching hotels using parameters: {search_params}")
     result = get_result(**search_params)
     top_3 = result[:3]
-    send_text(f'Here are your search results for {search_params["people"]} people, {search_params["rooms"]} rooms in '
-              f'{search_params["city"]}, {search_params["country"]} for dates from {search_params["date_in"]} to '
-              f'{search_params["date_out"]} with {search_params.get("score_filter", "any")} rating')
+    send_message(
+        f'Here are your search results for {search_params["people"]} people, {search_params["rooms"]} rooms in '
+        f'{search_params["city"]}, {search_params["country"]} for dates from {search_params["date_in"]} to '
+        f'{search_params["date_out"]} with {search_params.get("score_filter", "any")} rating')
     for hotel in top_3:
-        send_text(f'{hotel.name} ({hotel.score})\n'
-                  f'Total price: {hotel.price}\n'
-                  f'{BOOKING_PREFIX}{hotel.link}')
+        send_message(f'<a href="{BOOKING_PREFIX}{hotel.link}">{hotel.name} </a> ({hotel.score})\n'
+                     f'Total price: {hotel.price}')
         hotel.get_details()
         send_location(hotel.details.latitude, hotel.details.longitude)
     print('Notifications were sent successfully')
