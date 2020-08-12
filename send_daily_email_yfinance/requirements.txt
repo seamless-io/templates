@@ -1,0 +1,5 @@
+smls
+pandas
+python-dotenv
+yfinance
+lxml
