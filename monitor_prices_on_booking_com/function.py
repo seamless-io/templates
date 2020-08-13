@@ -12,10 +12,9 @@ REQUEST_HEADER = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.75 "
                   "Safari/537.36"}
 BOOKING_PREFIX = 'https://www.booking.com'
-ROW_PER_OFFSET = 25
 
 # https://core.telegram.org/bots
-BOT_API_KEY = 'Your bot api key, it looks something like "110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw"'
+BOT_API_KEY = 'Your bot api key, it looks something like "110301563:AAHdqTcvCH1vGWJxfSeoffAs0K5PsLDsaw"'
 CHANNEL_NAME = 'the name of a public channel with a "@" at the beginning, like "@my_channel"'
 
 
@@ -137,7 +136,7 @@ def send_location(latitude, longitude):
     resp.raise_for_status()
 
 
-if __name__ == '__main__':
+def main():
     search_params = {
         'people': 4,
         'rooms': 2,
@@ -161,3 +160,7 @@ if __name__ == '__main__':
         hotel.get_details()
         send_location(hotel.details.latitude, hotel.details.longitude)
     print('Notifications were sent successfully')
+
+
+if __name__ == '__main__':
+    main()
