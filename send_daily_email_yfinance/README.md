@@ -27,7 +27,7 @@ We are going to use Gmail account to send emails. For security reasons, user's G
 
 ## Setting up SeamlessCloud  
 Create a free account in [http://seamlesscloud.io](http://seamlesscloud.io/). Since you already have a Gmail account you will be able to sign up and then log in with your Gmail account.  
-![Seamless Sign Up](../images/send_daily_email_yfinance/smls-signup.png)
+![Seamless Sign Up](../images/smls-signup.png)
 
 ## Running the script  
 Follow [Quick Start Guide](https://app.seamlesscloud.io/guide) to run and publish your first test job. When you will be done with testing, copy/paste files from this folder to yours. Additionally, create `.env` file where we are going to store our Gmail credentials (check `.example_env` file for the reference). Since we are going to send an email to yourself, `SENDER` and `RECIPIENT` should be the same unless you want to send an email to other recipients. `PASSWORD` is a password from the [Setting up Gmail](#setting-up-gmail) step.  

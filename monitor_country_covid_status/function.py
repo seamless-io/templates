@@ -24,7 +24,7 @@ def send_whatsapp_message(msg):
 
 
 def main():
-    country = "Ukraine"
+    country = "Japan"
     today = datetime.now().date()
     week_ago = today - timedelta(days=7)
     print("Getting COVID data")
