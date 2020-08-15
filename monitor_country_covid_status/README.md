@@ -37,7 +37,7 @@ We are going to use Twilio account to send messages to Whatsapp.
 7. Now Twillio wants you to connect your WhatsApp account. Please follow the instructions.
     ![connect your WhatsApp account](../images/monitor_country_covid_status/7.png)
     
-8. Next pick the option "Send a One-Way WhatsApp Message". On this screen you will find your account ID and AuthToken. That is all we need in our Python script to send a message to WhatsApp. Please update the variables `account_sid` and `auth_token` in the script to actual values from your account.
+8. Next, pick the option "Send a One-Way WhatsApp Message". On this screen, you will find your account ID and AuthToken. That is all we need in our Python script to send a message to WhatsApp. Please update the variables `account_sid` and `auth_token` in the script to actual values from your account.
     ![Send a One-Way WhatsApp Message](../images/monitor_country_covid_status/8.png)
 
 
