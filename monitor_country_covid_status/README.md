@@ -31,7 +31,7 @@ We are going to use Twilio account to send messages to Whatsapp.
 5. Choose "Send WhatsApp messages" on the "What do you want to do first?" screen.   
     ![What do you want to do first?](../images/monitor_country_covid_status/5.png)
     
-6. Twillio asks you if you want to activate the Sandbox. Agree and click "Confirm".   
+6. Twillio asks you if you want to activate the Sandbox. Agree, and click "Confirm".   
     ![activate the Sandbox](../images/monitor_country_covid_status/6.png)
     
 7. Now Twilio wants you to connect your WhatsApp account. Please follow the instructions.
