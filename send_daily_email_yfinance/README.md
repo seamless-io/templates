@@ -37,6 +37,6 @@ You can also check out the [Quick Start Guide](https://app.seamlesscloud.io/guid
 
 The next step is to install requirements: `pip install -r requirements`. Please, remember, SeamlessCloud requires Python>=3.6, so you may need to use `pip3`.  
 
-We are almost there! Run our script on the SeamlessCloud: `smls run`. If you set up everything correctly, you will receive an email `World Indices Daily Report`. And finally, let's deploy our script to execute it on schedule, say 9 AM every day (UTC time): `smls publish --name "World Indices Daily Report" --schedule "0 9 * * *"`. If you are new to cron schedule, check this service [https://crontab.guru](https://crontab.guru/). 
+We are almost there! Run our script on the SeamlessCloud: `smls run`. If you set up everything correctly, you will receive an email `World Indices Daily Report`. And finally, let's deploy our script to execute it on schedule, say 9 AM every day (UTC): `smls publish --name "World Indices Daily Report" --schedule "0 9 * * *"`. If you are new to cron schedule, check this service [https://crontab.guru](https://crontab.guru/). 
     
 ![Email](../images/send_daily_email_yfinance/email.png)

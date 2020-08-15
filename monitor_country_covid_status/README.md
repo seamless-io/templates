@@ -51,6 +51,6 @@ Follow instructions to run and publish your first test job.
 
 You can also check out the [Quick Start Guide](https://app.seamlesscloud.io/guide). When you will be done with testing, copy/paste files from this folder to yours.    
 
-We are almost there! Run our script on the SeamlessCloud: `smls run`. If you set up everything correctly, you will receive a message in WhatsApp. And finally, let's deploy our script to execute it on schedule, say 9 AM every day (UTC time): `smls publish --name "Japan COVID Status" --schedule "0 9 * * *"` (of course, if you want to pick another country, feel free to name your Job accordingly). If you are new to cron schedule, check this service [https://crontab.guru](https://crontab.guru/). 
+We are almost there! Run our script on the SeamlessCloud: `smls run`. If you set up everything correctly, you will receive a message in WhatsApp. And finally, let's deploy our script to execute it on schedule, say 9 AM every day (UTC): `smls publish --name "Japan COVID Status" --schedule "0 9 * * *"` (of course, if you want to pick another country, feel free to name your Job accordingly). If you are new to cron schedule, check this service [https://crontab.guru](https://crontab.guru/). 
     
 ![Email](../images/monitor_country_covid_status/9.jpeg)
