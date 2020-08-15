@@ -30,7 +30,10 @@ Create a free account at [http://seamlesscloud.io](http://seamlesscloud.io/). Si
 ![Seamless Sign Up](../images/smls-signup.png)
 
 ## Running the script  
-Follow [Quick Start Guide](https://app.seamlesscloud.io/guide) to run and publish your first test job. When you will be done with testing, copy/paste files from this folder to yours. Additionally, create `.env` file where we are going to store our Gmail credentials (check `.example_env` file for the reference). Since we are going to send an email to yourself, `SENDER` and `RECIPIENT` should be the same unless you want to send an email to other recipients. `PASSWORD` is a password from the [Setting up Gmail](#setting-up-gmail) step.  
+Follow instructions to run and publish your first test job. 
+![Seamless Sign Up](../images/seamless_no_jobs_screen.png)
+
+You can also check out the [Quick Start Guide](https://app.seamlesscloud.io/guide). When you will be done with testing, copy/paste files from this folder to yours. Additionally, create `.env` file where we are going to store our Gmail credentials (check `.example_env` file for the reference). Since we are going to send an email to yourself, `SENDER` and `RECIPIENT` should be the same unless you want to send an email to other recipients. `PASSWORD` is a password from the [Setting up Gmail](#setting-up-gmail) step.  
 
 The next step is to install requirements: `pip install -r requirements`. Please, remember, SeamlessCloud requires Python>=3.6, so you may need to use `pip3`.  
 
