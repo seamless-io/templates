@@ -26,7 +26,7 @@ We are going to use Gmail account to send emails. For security reasons, user's G
 
 
 ## Setting up SeamlessCloud  
-Create a free account in [http://seamlesscloud.io](http://seamlesscloud.io/). Since you already have a Gmail account you will be able to sign up and then log in with your Gmail account.  
+Create a free account at [http://seamlesscloud.io](http://seamlesscloud.io/). Since you already have a Gmail account you will be able to sign up and then log in with your Gmail account.  
 ![Seamless Sign Up](../images/smls-signup.png)
 
 ## Running the script  

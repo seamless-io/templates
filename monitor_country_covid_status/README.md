@@ -42,7 +42,7 @@ We are going to use Twilio account to send messages to Whatsapp.
 
 
 ## Setting up SeamlessCloud  
-Create a free account in [http://seamlesscloud.io](http://seamlesscloud.io/).  
+Create a free account at [http://seamlesscloud.io](http://seamlesscloud.io/).  
 ![Seamless Sign Up](../images/smls-signup.png)
 
 ## Running the script  
