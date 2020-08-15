@@ -160,7 +160,3 @@ def main():
         hotel.get_details()
         send_location(hotel.details.latitude, hotel.details.longitude)
     print('Notifications were sent successfully')
-
-
-if __name__ == '__main__':
-    main()

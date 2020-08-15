@@ -43,7 +43,3 @@ def main():
     print("Sending Whatsapp message")
     send_whatsapp_message(msg)
     print("Job finished successfully")
-
-
-if __name__ == '__main__':
-    main()
