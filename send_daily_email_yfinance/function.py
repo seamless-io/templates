@@ -65,3 +65,7 @@ def main():
 
     send_email(sender, recipient, subject, body, password)
     print('Email sent successfully!')
+
+
+if __name__ == '__main__':
+    main()
