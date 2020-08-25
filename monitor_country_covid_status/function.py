@@ -1,3 +1,7 @@
+"""
+By default Seamless Cloud will execute the file `function.py`.
+You can override this behaviour by using --entrypoint flag.
+"""
 from datetime import datetime, timedelta
 
 import requests

@@ -1,3 +1,7 @@
+"""
+By default Seamless Cloud will execute the file `function.py`.
+You can override this behaviour by using --entrypoint flag.
+"""
 import os
 
 from dotenv import load_dotenv
@@ -46,10 +50,6 @@ def transform_data(data):
 
 
 def main():
-    """
-    By default Seamless Cloud will execute the function `main` in the file `function.py`.
-    You can override this behaviour by using --entrypoint flag.
-    """
     print('Start executing...')
 
     sender = os.getenv('SENDER')
