@@ -4,11 +4,11 @@ on:
     paths:
       - table_of_contents.yml
 
-name: Render README
+name: generate_readme_and_update_marketplace
 
 jobs:
-  render:
-    name: Render README
+  generate_readme_and_update_marketplace:
+    name: generate_readme_and_update_marketplace
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -17,6 +17,12 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.7
+
+      - name: Set up Seamless Web API credentials
+        uses: allenevans/set-env@v1.0.0
+        with:
+          SEAMLESS_WEB_API_PASSWORD: ${{ secrets.SEAMLESS_WEB_API_PASSWORD }}
+          SEAMLESS_HOST: staging-app.seamlesscloud.io
 
       - name: Install dependencies
         run: |
@@ -32,3 +38,6 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit README.md -m 'Rebuild README.md' || echo "No changes to commit"
           git push origin || echo "No changes to commit"
+
+      - name: Update Marketplace
+        run: python update_marketplace.py
