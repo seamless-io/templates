@@ -1,6 +1,7 @@
 templates:
   - name: Monitor booking.com hotel prices
     short_description: Search hotels on booking.com using pre-determined filters and send a message to the Telegram chanel.
+    path_to_files: monitor_prices_on_booking_com
     long_description_path: monitor_prices_on_booking_com/README.md
     tags:
       - telegram
@@ -8,6 +9,7 @@ templates:
 
   - name: Send daily Email with World Indices pices
     short_description: ~
+    path_to_files: send_daily_email_yfinance
     long_description_path: send_daily_email_yfinance/README.md
     tags:
       - gmail
@@ -15,6 +17,7 @@ templates:
 
   - name: Monitor country's COVID situation
     short_description: Get data on country's COVID confirmed cases and send travel recommendation to WhatsApp through Twilio.
+    path_to_files: monitor_country_covid_status
     long_description_path: monitor_country_covid_status/README.md
     tags:
       - covid
