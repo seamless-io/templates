@@ -4,7 +4,7 @@ import tarfile
 import requests
 
 PACKAGE_NAME = 'templates.tar.gz'
-EXCLUDE_FOLDERS_AND_FILES = ['.git', '__pycache__', '.pytest_cache']
+EXCLUDE_FOLDERS_AND_FILES = ['.git', '__pycache__', '.pytest_cache', '.idea']
 
 
 def filtr(file):
