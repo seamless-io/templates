@@ -8,7 +8,7 @@ templates:
       - booking
 
   - name: Send daily Email with World Indices pices
-    short_description: 5
+    short_description: 6
     path_to_files: send_daily_email_yfinance
     long_description_path: send_daily_email_yfinance/README.md
     tags:
