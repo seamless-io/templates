@@ -18,6 +18,7 @@ tar = tarfile.open(PACKAGE_NAME, "w:gz")
 tar.add('.', filter=filtr)
 tar.close()
 
-url = f"http://github_actions:{os.getenv('SEAMLESS_WEB_API_PASSWORD')}@{os.getenv('SEAMLESS_HOST')}/api/v1/marketplace"
+url = f"https://github_actions:{os.getenv('SEAMLESS_WEB_API_PASSWORD')}@{os.getenv('SEAMLESS_HOST')}/api/v1/marketplace"
 resp = requests.post(url, files={'templates': open(PACKAGE_NAME, 'rb')})
 resp.raise_for_status()
+print(f"Response code is {resp.status_code}")
