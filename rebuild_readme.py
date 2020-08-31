@@ -2,7 +2,7 @@ from typing import List
 
 import yaml
 
-result = yaml.load(open('table_of_contents.yml'))
+result = yaml.load(open('table_of_contents.yml'), Loader=yaml.FullLoader)
 content = """# Job templates
 
 """
