@@ -17,7 +17,7 @@ def check_name_uniqueness(names: List[str]):
 names = []
 for template in result['templates']:
     names.append(template['name'])
-    content += f"- [{template['name']}]({template['long_description_path']}) - {template['short_description']}\n"
+    content += f"- [{template['name']}]({template['path_to_files']}) - {template['short_description']}\n"
 check_name_uniqueness(names)
 with open('README.md', 'w') as f:
     f.write(content)
