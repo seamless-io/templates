@@ -1,8 +1,6 @@
 on:
   push:
     branches: master
-    paths:
-      - table_of_contents.yml
 
 name: generate_readme_and_update_marketplace
 
