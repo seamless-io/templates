@@ -146,8 +146,8 @@ def main():
         'rooms': 2,
         'country': 'Ukraine',
         'city': 'Bukovel',
-        'date_in': datetime.datetime(2020, 7, 31).date(),
-        'date_out': datetime.datetime(2020, 8, 2).date(),
+        'date_in': datetime.datetime(2020, 12, 31).date(),
+        'date_out': datetime.datetime(2021, 1, 2).date(),
         'score_filter': '9+'
     }
 
