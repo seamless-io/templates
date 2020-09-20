@@ -2,6 +2,7 @@
 By default Seamless Cloud will execute the file `function.py`.
 You can override this behaviour by using --entrypoint flag.
 """
+import os
 from datetime import datetime, timedelta
 
 import requests
@@ -18,11 +19,11 @@ def get_country_confirmed_infected(country, start_date, end_date):
 
 
 def send_whatsapp_message(msg):
-    account_sid = '<your Twilio account id>'
-    auth_token = '<your Twilio auth token>'
+    account_sid = os.getenv('ACCOUNT_SID')  # your Twilio account id
+    auth_token = os.getenv('AUTH_TOKEN')  # your Twilio auth token
     Client(account_sid, auth_token).messages.create(
         from_='whatsapp:+14155238886',
-        to='whatsapp:<your phone number>',
+        to=f'whatsapp:{os.getenv("PHONE_NUMBER")}',
         body=msg
     )
 

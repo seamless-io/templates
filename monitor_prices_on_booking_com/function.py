@@ -2,6 +2,8 @@
 By default Seamless Cloud will execute the file `function.py`.
 You can override this behaviour by using --entrypoint flag.
 """
+import os
+
 import datetime
 import urllib
 
@@ -18,8 +20,10 @@ REQUEST_HEADER = {
 BOOKING_PREFIX = 'https://www.booking.com'
 
 # https://core.telegram.org/bots
-BOT_API_KEY = 'Your bot api key, it looks something like "110301563:AAHdqTcvCH1vGWJxfSeoffAs0K5PsLDsaw"'
-CHANNEL_NAME = 'the name of a public channel with a "@" at the beginning, like "@my_channel"'
+# Your bot api key, it looks something like "110301563:AAHdqTcvCH1vGWJxfSeoffAs0K5PsLDsaw"'
+BOT_API_KEY = os.getenv('BOT_API_KEY')
+# The name of a public channel with a "@" at the beginning, like "@my_channel"
+CHANNEL_NAME = os.getenv('CHANNEL_NAME')
 
 
 class Hotel:

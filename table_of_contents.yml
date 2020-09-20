@@ -6,6 +6,9 @@ templates:
     tags:
       - telegram
       - booking
+    parameters:
+      - BOT_API_KEY
+      - CHANNEL_NAME
 
   - name: Send daily Email with World Indices pices
     short_description: 9
@@ -14,6 +17,10 @@ templates:
     tags:
       - gmail
       - yfinance
+    parameters:
+      - SENDER
+      - RECIPIENT
+      - PASSWORD
 
   - name: Monitor country's COVID situation
     short_description: Get data on country's COVID confirmed cases and send travel recommendation to WhatsApp through Twilio.
@@ -22,3 +29,7 @@ templates:
     tags:
       - covid
       - whatsapp
+    parameters:
+      - ACCOUNT_SID
+      - AUTH_TOKEN
+      - PHONE_NUMBER
