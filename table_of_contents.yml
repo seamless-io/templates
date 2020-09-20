@@ -11,7 +11,7 @@ templates:
       - CHANNEL_NAME
 
   - name: Send daily Email with World Indices pices
-    short_description: 9
+    short_description: sample description
     path_to_files: send_daily_email_yfinance
     long_description_url: https://github.com/seamless-io/templates/blob/master/send_daily_email_yfinance/README.md
     tags:
