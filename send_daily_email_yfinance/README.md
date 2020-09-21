@@ -30,13 +30,6 @@ Create a free account at [http://seamlesscloud.io](http://seamlesscloud.io/). Si
 ![Seamless Sign Up](../images/smls-signup.png)
 
 ## Running the script  
-Follow instructions to run and publish your first test job. 
-![Seamless Sign Up](../images/seamless_no_jobs_screen.png)
-
-You can also check out the [Quick Start Guide](https://app.seamlesscloud.io/guide). When you will be done with testing, copy/paste files from this folder to yours. Additionally, create `.env` file where we are going to store our Gmail credentials (check `.example_env` file for the reference). Since we are going to send an email to yourself, `SENDER` and `RECIPIENT` should be the same unless you want to send an email to other recipients. `PASSWORD` is a password from the [Setting up Gmail](#setting-up-gmail) step.  
-
-The next step is to install requirements: `pip install -r requirements`. Please, remember, SeamlessCloud requires Python>=3.6, so you may need to use `pip3`.  
-
-We are almost there! Run our script on the SeamlessCloud: `smls run`. If you set up everything correctly, you will receive an email `World Indices Daily Report`. And finally, let's deploy our script to execute it on schedule, say 9 AM every day (UTC): `smls publish --name "World Indices Daily Report" --schedule "0 9 * * *"`. If you are new to cron schedule, check this service [https://crontab.guru](https://crontab.guru/). 
+You can find this template in our Template library. Just find it in the list and click "Use Template". Then all you need to do is to fill out 3 Parameters: SENDER, RECIPIENT, PASSWORD. That's it! Now click "Run now" and check if it works. If you want to make changes to the code, please download the code and follow this guide https://staging-app.seamlesscloud.io/guide. 
     
 ![Email](../images/send_daily_email_yfinance/email.png)

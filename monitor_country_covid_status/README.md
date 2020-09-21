@@ -46,11 +46,6 @@ Create a free account at [http://seamlesscloud.io](http://seamlesscloud.io/).
 ![Seamless Sign Up](../images/smls-signup.png)
 
 ## Running the script  
-Follow instructions to run and publish your first test job. 
-![Seamless Sign Up](../images/seamless_no_jobs_screen.png)
-
-You can also check out the [Quick Start Guide](https://app.seamlesscloud.io/guide). When you will be done with testing, copy/paste files from this folder to yours.    
-
-We are almost there! Run our script on the SeamlessCloud: `smls run`. If you set up everything correctly, you will receive a message in WhatsApp. And finally, let's deploy our script to execute it on schedule, say 9 AM every day (UTC): `smls publish --name "Japan COVID Status" --schedule "0 9 * * *"` (of course, if you want to pick another country, feel free to name your Job accordingly). If you are new to cron schedule, check this service [https://crontab.guru](https://crontab.guru/). 
+You can find this template in our Template library. Just find it in the list and click "Use Template". Then all you need to do is to fill out 3 Parameters: ACCOUNT_SID, AUTH_TOKEN, PHONE_NUMBER. That's it! Now click "Run now" and check if it works. If you want to make changes to the code, please download the code and follow this guide https://staging-app.seamlesscloud.io/guide.
     
 ![Email](../images/monitor_country_covid_status/9.jpeg)

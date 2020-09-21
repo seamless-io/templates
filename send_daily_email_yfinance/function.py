@@ -4,14 +4,10 @@ You can override this behaviour by using --entrypoint flag.
 """
 import os
 
-from dotenv import load_dotenv
 import pandas as pd
 import yfinance as yf
 
 from send_email import send_email
-
-# Let's load environment variables from .env file
-load_dotenv()
 
 
 def collect_data():
