@@ -34,7 +34,7 @@ templates:
       - AUTH_TOKEN
       - PHONE_NUMBER
 
-  - name: Get a notification if it's expected to rain today
+  - name: Get a notification if it's going to rain today
     short_description: Get notification in Telegram if rain is expected today according to the weather forecast.
     path_to_files: rain_weather_forecast
     long_description_url: https://github.com/seamless-io/templates/blob/master/rain_weather_forecast/README.md
