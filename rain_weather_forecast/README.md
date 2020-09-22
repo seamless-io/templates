@@ -1,0 +1,1 @@
+This script sends a message to telegram if in the specified location there is a rain in the weather forecast for current day.
