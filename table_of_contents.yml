@@ -47,3 +47,20 @@ templates:
       - LONGITUDE
       - BOT_API_KEY
       - CHANNEL_NAME
+
+  - name: Create a backup of your MySQL database
+    short_description: Create a backup of your MySQL database every day. Works for any custom server over the SSH connection.
+    path_to_files: mysql_db_backups
+    long_description_url: https://github.com/seamless-io/templates/blob/master/mysql_db_backups/README.md
+    tags:
+      - mysql
+    parameters:
+      - SERVER_IP
+      - SSH_PORT
+      - SSH_USER
+      - SSH_PASSWORD
+      - DB_BIND_HOST
+      - DB_BIND_PORT
+      - DB_USER
+      - DB_PASSWORD
+      - DB_NAME

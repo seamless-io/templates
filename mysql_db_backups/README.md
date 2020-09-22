@@ -1,0 +1,1 @@
+If you have a server with MySQL database instance, you have access to this server over SSH and you want to create daily backups - this script is perfect for you.
