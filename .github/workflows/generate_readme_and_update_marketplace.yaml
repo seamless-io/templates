@@ -20,7 +20,7 @@ jobs:
         uses: allenevans/set-env@v1.0.0
         with:
           SEAMLESS_WEB_API_PASSWORD: ${{ secrets.SEAMLESS_WEB_API_PASSWORD }}
-          SEAMLESS_HOST: staging-app.seamlesscloud.io
+          SEAMLESS_HOST: app.seamlesscloud.io
 
       - name: Install dependencies
         run: |
