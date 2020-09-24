@@ -1,4 +1,13 @@
 templates:
+  - name: Example Job
+      short_description: If you're just starting out in Seamless Cloud - this is a perfect template for you.
+      path_to_files: example_job
+      long_description_url: https://github.com/seamless-io/templates/blob/master/example_job/README.md
+      tags:
+        - yfinance
+      parameters:
+        - COMPANY_TICKER
+
   - name: Monitor booking.com hotel prices
     short_description: Search hotels on booking.com using pre-determined filters and send a message to the Telegram chanel.
     path_to_files: monitor_prices_on_booking_com
