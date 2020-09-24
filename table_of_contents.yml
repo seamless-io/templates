@@ -1,6 +1,6 @@
 templates:
   - name: Example Job
-    short_description: If you're just starting out in Seamless Cloud - this is a perfect template for you.
+    short_description: We're going to the stock price and stock purchase recommendations for a company of your choice. This is a perfect template if you're new here.
     path_to_files: example_job
     long_description_url: https://github.com/seamless-io/templates/blob/master/example_job/README.md
     tags:
