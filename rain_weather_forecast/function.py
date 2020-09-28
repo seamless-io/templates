@@ -16,4 +16,4 @@ if __name__ == '__main__':
     if 'rain' in today_weather:
         requests.get(f'https://api.telegram.org/bot{BOT_API_KEY}/sendMessage',
                      params={'chat_id': CHANNEL_NAME,
-                             'text': 'It\'s going to rain today' + u'\U00002614' + ', take your umbrella with you!'})
+                             'text': 'It\'s going to rain today \U00002614, take your umbrella with you!'})
