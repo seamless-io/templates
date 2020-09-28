@@ -1,4 +1,5 @@
 This script sends a message to telegram if in the specified location there is a rain in the weather forecast for current day.
+The code could also be found here https://app.seamlesscloud.io/templates.
 
 ## Getting the weather forecast
 ![Open Weather](../images/rain_weather_forecast/2.jpg)
