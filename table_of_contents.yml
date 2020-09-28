@@ -46,7 +46,7 @@ templates:
   - name: Get a notification if it's going to rain today
     short_description: Get notification in Telegram if rain is expected today according to the weather forecast.
     path_to_files: rain_weather_forecast
-    long_description_url: https://github.com/seamless-io/templates/blob/master/rain_weather_forecast/README.md
+    long_description_url: https://blog.seamlesscloud.io/2020/09/be-prepared-for-bad-weather-using-20-lines-of-python/
     tags:
       - telegram
       - weather
