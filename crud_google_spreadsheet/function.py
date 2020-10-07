@@ -9,7 +9,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 CRYPTO = os.getenv('CRYPTO', 'BTC')  # If not provided, let's collect Bitcoin by default
 
 JSON_KEYFILE = os.getenv('JSON_KEYFILE')  # The file you get after generating Google Spreadsheet API key
-SHEET_ID = os.getenv('SHEET_ID')  # You can get Sheet ID from URL
+SHEET_ID = os.getenv('SHEET_ID')  # You can get Sheet ID from a Google Spreadsheet URL
 SHEET_NAME = os.getenv('SHEET_NAME')  # The name of the sheet where to insert data
 SCOPE = ['https://spreadsheets.google.com/feeds',
          'https://www.googleapis.com/auth/spreadsheets',
@@ -53,6 +53,7 @@ def append_record(gsheet_id, sheet_name, record):
     """
     gclient = get_gs_client(JSON_KEYFILE, SCOPE)
     advisers_sheet = gclient.open_by_key(gsheet_id)
+    # Find more methods here: https://gspread.readthedocs.io/en/latest/api.html
     advisers_sheet.worksheet(sheet_name).append_row(record, 'USER_ENTERED')
 
 
