@@ -1,12 +1,12 @@
 import os
+import requests
 from datetime import datetime
 
 import gspread
-import yfinance as yf
 from oauth2client.service_account import ServiceAccountCredentials
 
-# You can find Major World Indices here: https://finance.yahoo.com/world-indices
-INDICES = os.getenv('INDICES', '^GSPC')  # If not provided, let's collect S&P 500 by default
+# You can find more crypto assets here: https://messari.io/
+CRYPTO = os.getenv('CRYPTO', 'BTC')  # If not provided, let's collect Bitcoin by default
 
 JSON_KEYFILE = os.getenv('JSON_KEYFILE')  # The file you get after generating Google Spreadsheet API key
 SHEET_ID = os.getenv('SHEET_ID')  # You can get Sheet ID from URL
@@ -29,40 +29,39 @@ def get_gs_client(json_keyfile, scope):
     return client
 
 
-def collect_indices(indices):
+def collect_crypto(crypto):
     """
-    Collects indices data.
-    :param list indices: the list of tickers
-    :return list: The list of lists
+    Collects crypto data.
+    :param str crypto: the crypto asset name
+    :return list: The list like ['BTC', 1029.34, '2020-01-01 10:00:00'']
     """
-    tickers_list = []
-    for index in indices:
-        ticker = yf.Ticker(index)
-        name = ticker.info['shortName']
-        price_close = ticker.info['ask']  # The ask price refers to the lowest price a seller will accept for a security
-        date = str(datetime.now())
-        tickers_list.append([name, price_close, date])
-
-    return tickers_list
+    url = f'https://data.messari.io/api/v1/assets/{crypto}/metrics'
+    resp = requests.get(url)
+    data = resp.json()
+    price = data['data']['market_data']['price_usd']
+    date = str(datetime.now())
+    return [crypto, price, date]
 
 
-def append_records(gsheet_id, sheet_name, records):
+def append_record(gsheet_id, sheet_name, record):
     """
     Collects indices data.
     :param gsheet_id str:
     :param sheet_name str:
-    :param records list:
+    :param record list:
     :return None:
     """
     gclient = get_gs_client(JSON_KEYFILE, SCOPE)
     advisers_sheet = gclient.open_by_key(gsheet_id)
-    advisers_sheet.worksheet(sheet_name).append_rows(records, 'USER_ENTERED')
+    advisers_sheet.worksheet(sheet_name).append_row(record, 'USER_ENTERED')
 
 
 def main():
-    indices = INDICES.split(',')
-    fetched_indices = collect_indices(indices)
-    append_records(SHEET_ID, SHEET_NAME, fetched_indices)
+    print('Start executing...')
+    crypto_data = collect_crypto(CRYPTO)
+    print(f'{CRYPTO} price: {crypto_data[1]}')
+    append_record(SHEET_ID, SHEET_NAME, crypto_data)
+    print('Finish executing.')
 
 
 if __name__ == '__main__':
