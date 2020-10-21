@@ -74,7 +74,7 @@ templates:
       - DB_PASSWORD
       - DB_NAME
 
-  - name: Update a Google Spreadsheet
+  - name: Collect Bitcoin price into a Google Spreadsheet
     short_description: This job inserts a price of cryptocurrency of your choice to a Google Spreadsheet.
     path_to_files: crud_google_spreadsheet
     long_description_url: https://github.com/seamless-io/templates/blob/master/crud_google_spreadsheet/README.md

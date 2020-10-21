@@ -18,23 +18,12 @@ SCOPE = ['https://spreadsheets.google.com/feeds',
 
 
 def get_gs_client(json_keyfile, scope):
-    """
-    Construct a Gspread object from JSON keyfile by name.
-    :param str json_keyfile: the list of tickers
-    :param list scope: the list of scopes
-    :return `client_class` instance:
-    """
     creds = ServiceAccountCredentials.from_json_keyfile_name(json_keyfile, scope)
     client = gspread.authorize(creds)
     return client
 
 
 def collect_crypto(crypto):
-    """
-    Collects crypto data.
-    :param str crypto: the crypto asset name
-    :return list: The list like ['BTC', 1029.34, '2020-01-01 10:00:00'']
-    """
     url = f'https://data.messari.io/api/v1/assets/{crypto}/metrics'
     resp = requests.get(url)
     data = resp.json()
@@ -44,13 +33,6 @@ def collect_crypto(crypto):
 
 
 def append_record(gsheet_id, sheet_name, record):
-    """
-    Collects indices data.
-    :param gsheet_id str:
-    :param sheet_name str:
-    :param record list:
-    :return None:
-    """
     gclient = get_gs_client(JSON_KEYFILE, SCOPE)
     advisers_sheet = gclient.open_by_key(gsheet_id)
     # Find more methods here: https://gspread.readthedocs.io/en/latest/api.html
