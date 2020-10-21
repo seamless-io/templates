@@ -36,4 +36,11 @@ Before running the script, rename the current sheet to `crypto`. You can choose 
 ## Setting up SeamlessCloud
 Create a free account at [http://seamlesscloud.io](http://seamlesscloud.io/).
 You can find this script in our [Templates Library](https://app.seamlesscloud.io/templates). You can try it out right in the browser, no need to do anything in your local environment. The Template is called "Collect Bitcoin price into a Google Spreadsheet".
-You can find more info here: [https://app.seamlesscloud.io/faq/cli](https://app.seamlesscloud.io/faq/cli) and email us at `hello@seamlesscloud.io`
+
+Then you would need to fill Parameteres with your data
+![parameters](../images/crud_gsheet/parameters.png)
+
+With Seamless Cloud you can also deploy any custom script from your local machine, more info here: [https://app.seamlesscloud.io/faq/cli](https://app.seamlesscloud.io/faq/cli). Email us at `hello@seamlesscloud.io` in case you have questions.
+
+As a result, the spreadsheet should be populated with a new row containing the current BTC price.
+![parameters](../images/crud_gsheet/sheet.png)
