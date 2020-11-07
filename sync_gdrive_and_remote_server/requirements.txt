@@ -1,0 +1,4 @@
+gspread==3.6.0
+google-api-python-client==1.12.3
+paramiko==2.7.1
+smls
