@@ -95,3 +95,5 @@ templates:
       - gdrive
       - ssh
       - server
+    parameters:
+      - DUMMY_VAR
