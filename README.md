@@ -7,3 +7,4 @@
 - [Get a notification if it's going to rain today](rain_weather_forecast) - Get notification in Telegram if rain is expected today according to the weather forecast.
 - [Create a backup of your MySQL database](mysql_db_backups) - Create a backup of your MySQL database every day. Works for any custom server over the SSH connection.
 - [Collect Bitcoin price into a Google Spreadsheet](crud_google_spreadsheet) - This job inserts a price of cryptocurrency of your choice to a Google Spreadsheet.
+- [Sync files between a Google Drive folder and a remote server](sync_gdrive_and_remote_server) - This job synchronizes files between a Google Drive folder and a remote server.
