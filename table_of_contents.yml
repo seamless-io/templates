@@ -86,3 +86,12 @@ templates:
       - JSON_KEYFILE
       - SHEET_ID
       - SHEET_NAME
+
+  - name: Sync files between a Google Drive folder and a remote server
+    short_description: This job synchronizes files between a Google Drive folder and a remote server.
+    path_to_files: sync_gdrive_and_remote_server
+    long_description_url: https://github.com/seamless-io/templates/blob/master/sync_gdrive_and_remote_server/README.md
+    tags:
+      - gdrive
+      - ssh
+      - server
